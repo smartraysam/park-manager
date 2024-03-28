@@ -1,0 +1,170 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Park Management System",
+    "description": "Park Management System API Documentation"
+  },
+  "host": "localhost:3009",
+  "servers": [
+    {
+      "url": "http://localhost:3009/",
+      "description": "dev server"
+    }
+  ],
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "PMS",
+      "description": "Park Management System API"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-KEY",
+      "description": "any description..."
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/status": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/stats": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "description": "",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/connect": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/disconnect": {
+      "get": {
+        "description": "",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/users/me": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Adeseluka Toba Samuel"
+        },
+        "diplomas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "school": {
+                "type": "string",
+                "example": "ALX University"
+              },
+              "year": {
+                "type": "number",
+                "example": 2024
+              },
+              "completed": {
+                "type": "boolean",
+                "example": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "AddUser": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Anthony Ifeanyi Nwanbosi"
+        },
+        "about": {
+          "type": "string",
+          "example": ""
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+}
