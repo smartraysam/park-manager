@@ -8,7 +8,7 @@ import dbClient from '../utils/db';
 const userQueue = new Queue('email sending');
 
 class UsersController {
-  static async postNew(req, res) {
+  static async createUser(req, res) {
     // console.log('Request Body:', req.body);
     const { email } = req.body;
     const { password } = req.body;
@@ -39,7 +39,7 @@ class UsersController {
     res.status(201).json({ id: userId, email });
   }
 
-  static async getMe(req, res) {
+  static async getUser(req, res) {
     try {
       const { 'x-token': token } = req.headers;
 

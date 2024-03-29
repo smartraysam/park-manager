@@ -1,5 +1,4 @@
-import swaggerAutogen from 'swagger-autogen';
-
+// import swaggerAutogen from 'swagger-autogen';
 const options = {
     openapi: 'OpenAPI 3',   // Enable/Disable OpenAPI. By default is null
     language: 'en-US',      // Change response language. By default is 'en-US'
@@ -8,6 +7,7 @@ const options = {
     autoQuery: false,       // Enable/Disable automatic query capture. By default is true
     autoBody: false         // Enable/Disable automatic body capture. By default is true
 }
+const swaggerAutogen = require('swagger-autogen')(options);
 
 const doc = {
   info: {
@@ -60,4 +60,4 @@ const doc = {
 
 const outputFile = './docs/swagger-output.json';
 const endpointsFiles = ['./routes/index.js'];
-swaggerAutogen(options)(outputFile, endpointsFiles, doc);
+swaggerAutogen(outputFile, endpointsFiles, doc);

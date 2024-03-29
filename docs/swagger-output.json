@@ -58,7 +58,7 @@
         }
       }
     },
-    "/users": {
+    "/users/create": {
       "post": {
         "description": "",
         "responses": {
@@ -71,8 +71,8 @@
         }
       }
     },
-    "/connect": {
-      "get": {
+    "/login": {
+      "post": {
         "description": "",
         "responses": {
           "200": {
@@ -87,8 +87,8 @@
         }
       }
     },
-    "/disconnect": {
-      "get": {
+    "/logout": {
+      "post": {
         "description": "",
         "responses": {
           "204": {

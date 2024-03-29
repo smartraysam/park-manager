@@ -11,8 +11,8 @@ const router = express.Router();
 router.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 router.get('/status', AppController.getStatus);
 router.get('/stats', AppController.getStats);
-router.post('/users', UsersController.postNew);
-router.get('/connect', AuthController.getConnect);
-router.get('/disconnect', AuthController.getDisconnect);
-router.get('/users/me', UsersController.getMe);
+router.post('/users/create', UsersController.createUser);
+router.post('/login', AuthController.login);
+router.post('/logout', AuthController.logout);
+router.get('/users/me', UsersController.getUser);
 export default router;

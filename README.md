@@ -82,7 +82,9 @@ Create tests for each endpoints:
 * `GET /status`
 * `GET /stats`
 * `POST /users`
-* `GET /connect`
-* `GET /disconnect`
+* `POST /login`
+* `POST /logout`
 * `GET /users/me`
 
+## Swagger documentation
+run `$ npm run swagger`  to update the documentation
