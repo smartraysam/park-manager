@@ -40,21 +40,7 @@ const doc = {
       description: 'any description...',
     },
   },
-  definitions: {
-    User: {
-      name: 'Adeseluka Toba Samuel',
-      diplomas: [
-        {
-          school: 'ALX University',
-          year: 2024,
-          completed: true,
-        },
-      ],
-    },
-    AddUser: {
-      $name: 'Anthony Ifeanyi Nwanbosi',
-      about: '',
-    },
+  definitions: { 
   },
 };
 
