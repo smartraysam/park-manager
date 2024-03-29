@@ -6,7 +6,7 @@ import redisClient from '../utils/redis';
 import dbClient from '../utils/db';
 
 class AuthController {
-  static async getConnect(req, res) {
+  static async login(req, res) {
     try {
       const authHeader = req.headers.authorization;
       if (!authHeader || !authHeader.startsWith('Basic ')) {
@@ -37,7 +37,7 @@ class AuthController {
     }
   }
 
-  static async getDisconnect(req, res) {
+  static async logout(req, res) {
     try {
       const { 'x-token': token } = req.headers;
 
